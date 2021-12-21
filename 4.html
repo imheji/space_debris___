@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+
+	<title>about space debris</title>
+	<style>
+
+		     a:link { color: black; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+
+
+
+
+
+		body{ background: black; overflow-x: hidden;
+			  -ms-overflow-style:none; margin: 0;  height: 4500px; 
+
+				 font-family: 'Gothic A1', sans-serif;}
+
+		body::-webkit-scrollbar {display: none;}
+		
+		section {margin:0;}
+
+		button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+button {
+  background: none;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size:20px;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: 20px 40px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button::before,
+button::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  color: #C2D584;
+  border: 3px solid #C2D584;
+}
+
+/* BUTTON 1 */
+.bt::after {
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.bt:hover:after {
+  height: 100%;
+}
+
+
+
+		#star{display: none;}
+		.starClone{ position: absolute; left: 0; top: 0; z-index: 2;  
+					width: 400px; height: 400px;}
+
+
+    
+
+
+
+
+		.all { margin: auto; width: 1300px; padding-top: 0px;
+
+		}
+
+
+		.box {margin: auto; }
+
+		.box2 {margin: auto; text-align: right; }
+
+		
+
+		.padding-top { padding-top: 250px; }
+
+
+		.textbox{margin:auto; 
+
+			color: white; margin: auto; text-align: left;}
+
+
+			.textbox2{margin:auto; 
+
+			color: white;  text-align: right;}
+
+
+		.imgbox1 { width: 600px; height: 500px; background-color: blue; margin-right: 100px; z-index: -10;
+		 animation: up-down 1.4s infinite ease-in-out alternate; }
+
+					 @keyframes up-down{
+			  from{
+			    transform: translatey(0px);
+			  }
+			  to{
+			    transform: translatey(80px);
+			  }
+			}
+
+		.imgbox2 { width: 600px; height: 500px; background-color: yellow;
+		  animation: up-down2 1.4s infinite ease-in-out alternate; z-index: -10;}
+
+
+		  @keyframes up-down2{
+			  from{
+			    transform: translatey(80px);
+			  }
+			  to{
+			    transform: translatey(0px);
+			  }
+			}
+
+
+		.imgbox3 {width: 1300px; height: 300px; background-color: blue;
+		          margin-top: 30px; margin-bottom: 30px;}
+
+		          .size {width: 700px; }
+		           .size2 {width: 1500px; }
+
+
+		h2 {color: white; margin: auto; text-align: left; font-size:100px;}
+
+		.t1{color: white; margin: auto; text-align: left; font-size:45px;
+				padding-top: 0px; font-weight: 600;}
+		.t2{color: white; margin: auto; text-align: left; font-size:35px;
+		 padding-top: 40px; line-height: 1.7;}
+
+		 .t3{color: white; margin: auto; text-align: left; font-size:25px;
+		 padding-top: 30px; line-height: 0.8;font-weight: 600; }
+
+
+
+		 .tr2{color: white; margin: auto; text-align: right; font-size:35px;
+		 padding-top: 40px; line-height: 1.7;}
+
+
+		 .padding-bottom { padding-bottom: 200px; }
+
+
+
+		 .footer{ margin: auto; height: 400px; background-image: url(footer.jpg); background-size: contain; width: 100%; background-repeat: no-repeat; }
+		 .ft { margin: auto; text-align: center;  color:white; font-weight: 600; font-size: 20px;
+		      padding-top: 20px;}
+
+		 .bt { margin: auto; text-align: center; display: block; margin-top: 100px;}
+
+
+
+		 .hidden {overflow: hidden;}
+
+
+
+
+				nav { position: sticky; top: 0px; margin-left: 2%; font-family: 'Kanit', sans-serif;}
+
+					a { text-decoration:none }
+
+	
+ 					a:visited { color: white; text-decoration: none;}
+ 					a:hover { color: white; text-decoration: none;}
+
+
+			
+	.container{
+   max-width:205px;
+   background color: black
+   margin-left: 10%;
+   padding:10px 0px 20px 0px;
+   border-radius:4px;
+   display: fixed;
+   z-index: 10;
+}
+
+
+
+.linkhere{
+   font-size:18px;
+   font-weight:300;
+   text-align:left;
+   position:relative;
+   height:40px;
+   line-height:40px;
+   margin-top:10px;
+   overflow:hidden;
+   width:90%;
+   margin-left:5%;
+   cursor:pointer;
+}
+
+
+.flex {display:flex; padding-top: 50px;}
+
+
+.link{
+   font-size:18px;
+   font-weight:300;
+   text-align:left;
+   position:relative;
+   height:40px;
+   line-height:40px;
+   margin-top:10px;
+   overflow:hidden;
+   width:90%;
+   margin-left:5%;
+   cursor:pointer;
+}
+.link:after{
+   content: '';
+   position:absolute;
+   width:80%;
+   border-bottom:2px solid rgba(255, 255, 255, 0.5);
+   bottom:50%;
+   left:-100%;
+   transition-delay: all 0.5s;
+   transition: all 0.5s;
+}
+.link:hover:after,
+.link.hover:after{
+   left:100%;
+}
+.link .text{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+   transition:all 0.75s;
+   transform:translateY(100%) translateZ(0);
+   transition-delay:all 0.25s;
+}
+
+
+.linkhere .here{
+   text-shadow:0px -40px 0px rgba(0, 172, 237, 1);
+   transition:all 0.75s;
+   transform:translateY(100%) translateZ(0);
+   transition-delay:all 0.25s;
+   font-weight:600;
+}
+
+
+.link:hover .text,
+.link.hover .text{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+   transform:translateY(0%) translateZ(0);
+   font-weight:400;
+}
+
+
+
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+.flux {
+  animation: flux 3s linear infinite;
+  -moz-animation: flux 3s linear infinite;
+  -webkit-animation: flux 3s linear infinite;
+  -o-animation: flux 3s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+
+  	 text-shadow: 0 0 .5vw #858585, 0 0 1.5vw #858585, 0 0 5vw #858585;
+    color:white;
+   
+  }
+  50% {
+    text-shadow: 0 0 1vw #000000, 0 0 3vw #000000, 0 0 10vw #000000 ;
+    color:white;
+  }
+}
+
+
+
+.left {padding-left: 10%;}
+.right {padding-right: : 10%;}
+
+.left2 {padding-left: 45%;}
+.left3 {padding-left:76%;}
+
+.pad { padding-top:30px; }
+
+
+	</style>
+
+
+
+
+</head>
+<body>
+
+
+<nav>
+	
+<div class="container">
+  <div class="container">
+  <div class="link">
+    <div class="text"><a href="index.html">distant view</a></div>
+  </div>
+  <div class="link">
+    <div class="text"><a href="2.html">middle distance view</a></div>
+  </div>
+  <div class="link">
+    <div class="text"><a href="3.html">close-range view</a></div>
+  </div>
+  <div class="linkhere">
+    <div class="here"><a href="4.html">about space debris</a></div>
+  </div>
+
+</div>
+
+</div>
+
+
+  <script type="text/javascript">
+  	
+  	var links = document.getElementsByClassName('link')
+	for(var i = 0; i <= links.length; i++)
+	   addClass(i)
+
+
+	function addClass(id){
+   setTimeout(function(){
+      if(id > 0) links[id-1].classList.remove('hover')
+      links[id].classList.add('hover')
+   }, id*750) 
+}
+
+
+
+
+  </script>
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+<section class="all">
+
+
+	<section>
+
+	<div class="box">
+	<h2 class="flux left">우주쓰레기</h2>
+	<p class="textbox t1 left">
+		우주 공간을 떠도는 다양한 크기의 인공적인 모든 물체
+	</p>
+	<p class="textbox t2 left">
+		지구 주위의 우주 공간을 떠도는 우주쓰레기는 현재 총중량이<br>
+		약 9,300톤에 달하는 것으로 추정하고 있다.<br>
+		우주쓰레기는 지속적으로 늘어왔지만, 최근 몇 년 사이에<br> 인공위성간의
+		충돌로 인해 우주쓰레기의 숫자가 <br>급격하게 증가하고 있다.
+	</p>
+
+	</div>
+	</section>
+
+
+
+	<section class="box2 padding-top">
+	<h2 class="textbox2, flux left2">대량 발생 사례</h2>
+	<div class="flex">
+		
+		<div class="imgbox1"> <img class="size" src="1.gif"></div>
+
+		<div class="imgbox2"><img class="size" src="2.gif"></div>
+
+
+	</div>
+
+
+	</section>
+
+
+
+
+	<section class="padding-top">
+
+	<div class="box">
+	<h2 class="flux left">충돌 사례</h2>
+
+	<p class="textbox t2 left">
+		지상에서 추적이 불가능한 10cm 이하의 작은 파편의 경우 수류탄과<br>
+		같은 폭발력을 가지며 약 5cm 두께의 금속벽을 관통할 수 있는<br>
+		파괴력을 가진다.<br>우주 쓰레기 자체가 매우 빠른 속도로 움직이고 있으며<br>이와 함께 인공위성과 같은 비행체들도 대략 시속 29,000km에 달하는 <br> 매우 빠른 속도로 이동하고 있기 때문이다.</p>
+
+
+	<div class="imgbox3"><img class="size2" src="crash.gif"></div>
+
+	<div class="small"> 
+	<p class="textbox t3 left">
+
+		1) 1996년 7월 프랑스의 인공위성 세리스가 1986년 발사된 아리안 로켓의
+		파편조각과 충돌하여 심각한 손상
+	 </p>
+
+	 <p class="textbox t3 left">
+
+		2) 1983년 우주왕복선 챌린저호의 경우 궤도 비행 중 작은 페인트 조각이 유리창에 충돌하여 유리창 손상
+	 </p>
+
+	 <p class="textbox t3 left">
+
+		3) 2007년 우주쓰레기로 인해 미국 우주왕복선 엔데버호의 선체에 구멍
+	 </p>
+
+	 <p class="textbox t3 left">
+		4) 2016년 유럽항공우주의 센티널1-A 위성이 1mm 크기의 우주쓰레기와
+		충돌해 40cm 가량 파손 
+	 </p>
+
+
+
+
+
+	 </div>
+
+
+
+	</div>
+	</section>
+
+
+
+	<section class="padding-top">
+
+	<div class="box">
+	<h2 class="textbox2, flux left3">위험성</h2>
+
+	<p class="textbox tr2">
+		우주쓰레기는 또 다른 우주쓰레기를 증가시키는 원인물질이다.<br>
+	우주쓰레기에 맞아 파괴된 우주쓰레기가 또다른 파편을 발생시키고<br>또다른 위성을 위협하는 연쇄폭발의 악순환이 일어난다. 
+	<br><br> 이 때문에 일각각의 우주개발 전문가들은 더 많은 우주쓰레기가 <br> 
+	계속 생겨나, 결국 우주쓰레기 때문에 인공위성을 운용하지<br> 못할 지경에 빠질 것이라는 비관적 전망을 말하고 있다.
+	</p>
+
+	</div>
+	</section>
+
+
+
+
+
+	<section class="padding-top padding-bottom">
+
+	<div class="box">
+	<h2 class="textbox, flux left">우주쓰레기의 주인</h2>
+
+	<p class="textbox t2 left">
+		우주 이용에 관한 국제적 합의는 다른 분야에 비해 특히 더디다.<br>
+	충돌사고가 생겨도 진상조사를 할 기술적인 수단이 마땅치 않기 때문에<br>사실상 무방비 상태이며, 쓰레기의 소유권이 쓰레기를 만든
+	<br> 나라에 있는지 쓰레기를 수거한 나라에 있는지에 대한 국제적 합의가 없다.
+	<br><br>우주쓰레기 관리 시스템이 확립되기 전까지 지구 궤도의 혼란은 더욱<br>
+	가중될 것으로 보인다.
+
+	</div>
+	</section>
+
+
+
+
+
+	</section>
+
+
+	<footer class="footer">
+		<div class="pad">
+		<button class="bt" id="bt" style="cursor:pointer" onclick="alert('아직 상용화된 우주쓰레기 처리 방안이 없습니다.')" >Remove space debris</button>
+
+		<p class="ft">ⓒAll Data Rights Reserved JPL,ESA <br>
+		Website designed by Heji Lim</p>
+	</div>
+
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+<img src="trash1.png", id="star">
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+	var starArray = [];
+
+	var t = document.getElementById("star");
+	for(var i=0; i<70; i++){
+		var n = t.cloneNode(true);
+		n.style.display = "block";
+		n.className = "starClone";
+		n.id = "s" + i;
+
+		n.style.left = Math.random()*1500 + "px";
+		n.style.top = Math.random()*4200 + "px";
+		n.addEventListener("mouseover", myFunction);
+		document.body.appendChild(n);	
+	}
+	
+	function myFunction(){
+		this.style.left = event.clientX;
+		this.style.top = event.clientY;	
+		console.log(event.clientX);
+		console.log(event.clientY);
+		starArray.push(event.target.id);
+		this.removeEventListener("mouseover", myFunction);
+		console.log(starArray);
+	}
+
+	window.onmousemove = function(){
+		for(var i=0; i<starArray.length; i++){
+			var t = document.getElementById(starArray[i]);
+			t.style.left = (event.pageX + Math.random()*10) + "px";
+			t.style.top = (event.pageY + Math.random()*10) + "px";
+		}
+
+
+
+  
+
+	}
+
+
+
+ 
+  
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+	<title>middle distance view</title>
+	<style>
+		body{ background: black; overflow-x: hidden; 
+			  -ms-overflow-style:none; margin: 0; font-family: 'Gothic A1', sans-serif;
+        overflow: hidden;}
+
+		body::-webkit-scrollbar {display: none;}
+		
+		section {margin:0;}
+
+
+		     a:link { color: black; text-decoration: none;}
+ 				a:visited { color: black; text-decoration: none;}
+
+
+
+    h2 {color: white; font-size:2.5vh; font-weight: 400; margin: 0;}
+
+    p {color: white; font-size:8vh; font-weight: 600; margin: 0;
+      padding-bottom: 3vh;}
+ 
+
+
+		#star{display: none;}
+		.starClone{ position: absolute; left: 0; top: 0; z-index: 2;  
+					width: 450px; height: 450px;}
+
+		.all { margin: auto; width: 100vw; height: 100vh; padding-top: 0px;
+           display: flex;height: 950px;
+           }
+
+
+		.box1 {margin: auto; margin-left: 3vw; width: 60vw;  }
+    .box2 {margin: auto; margin: 0; width: 5vw; }
+
+    .box3 {margin: auto; margin-right: 3vw; width: 60vw;}
+
+
+    .con1 {  height: 30vh; margin: 0; margin-top: -15vh;
+             color: white; opacity: 0.1; transition-duration: 0.2s; transition-timing-function: ease-out;}
+
+
+  
+      .con1:hover  {opacity: 1;  color: white; text-shadow: 0 0 .5vw #858585, 0 0 1.5vw #858585, 0 0 5vw #858585;
+    color:white;
+
+          }
+
+
+    .con2 { height: 30vh; margin: 0; padding-bottom: 7vh; margin-top: -50vh;
+           text-align:right; 
+          color: white; opacity: 0.1; transition-duration: 0.2s; transition-timing-function: ease-out;}
+
+          .con2:hover  {opacity: 1;  color: white; text-shadow: 0 0 .5vw #858585, 0 0 1.5vw #858585, 0 0 5vw #858585;
+    color:white;
+          }
+
+
+
+    .con3 { height: 15vh;  text-align:right; margin-top: 18vh; 
+     color: white; opacity: 0.1; transition-duration: 0.2s; transition-timing-function: ease-out;}
+
+      .con3:hover  {opacity: 1;  color: white; text-shadow: 0 0 .5vw #858585, 0 0 1.5vw #858585, 0 0 5vw #858585;
+    color:white;
+
+          }
+
+
+
+
+    .img1 { background-image: url("cm.png"); height:200px;  width: 300px ; 
+      background-size: cover; margin-left: 380px; text-align: right ;}
+
+
+
+		.textbox{margin:auto; 
+
+			color: white; margin: auto; text-align: center; font-size:80px;}
+
+
+      .flex {display: flex; }
+
+      .line1 { width: 300px; margin-top: 5px; margin-left: 10px;}
+
+       .line2 { width: 300px; margin-top: 5px;  margin-right: 10px;}
+
+        .line3 { width: 300px; margin-top:-26px;margin-right: 10px; }
+
+
+
+
+				nav { position: fixed; top: 0px; margin-left: 2%; font-family: 'Kanit', sans-serif; width: 1464.740px;}
+
+				a { text-decoration:none }
+
+	
+ 				a:visited { color: white; text-sdecoration: none;}
+ 				a:hover { color: white; text-decoration: none;}
+
+
+  .container{
+   max-width:205px;
+   background color: none;
+   margin-left: 0%;
+   padding:10px 0px 20px 0px;
+   border-radius:4px;
+}
+
+
+.linkhere{
+   font-size:18px;
+   font-weight:300;
+   text-align:left;
+   position:relative;
+   height:40px;
+   line-height:40px;
+   margin-top:10px;
+   overflow:hidden;
+   width:90%;
+   margin-left:5%;
+   cursor:pointer;
+}
+
+
+
+
+
+
+.link{
+   font-size:18px;
+   font-weight:300;
+   text-align:left;
+   position:relative;
+   height:40px;
+   line-height:40px;
+   margin-top:10px;
+   overflow: hidden;
+  
+   width:90%;
+   margin-left:5%;
+   cursor:pointer;
+}
+.link:after{
+   content: '';
+   position:absolute;
+   width:80%;
+   border-bottom:2px solid rgba(255, 255, 255, 0.5);
+   bottom:50%;
+   left:-100%;
+   transition-delay: all 0.5s;
+   transition: all 0.5s;
+}
+.link:hover:after,
+.link.hover:after{
+   left:100%;
+}
+.link .text{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+   transition:all 0.75s;
+   transform:translateY(100%) translateZ(0);
+   transition-delay:all 0.25s;
+}
+
+
+.linkhere .here{
+   text-shadow:0px -40px 0px rgba(0, 172, 237, 1);
+   transition:all 0.75s;
+   transform:translateY(100%) translateZ(0);
+   transition-delay:all 0.25s;
+   font-weight:600;
+}
+
+
+.link:hover .text,
+.link.hover .text{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+   transform:translateY(0%) translateZ(0);
+   font-weight:400;
+}
+
+
+
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+.bg {width: 100%; height: 100%; margin: 0px auto; position: relative;}
+
+.end { justify-content: flex-end; }
+
+
+
+
+
+video {
+
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+	</style>
+
+
+
+
+</head>
+<body>
+
+
+<nav>
+	
+<div class="container">
+  <div class="link">
+    <div class="text"><a href="index.html">distant view</a></div>
+  </div>
+  <div class="linkhere">
+    <div class="here"><a href="2.html">middle distance view</a></div>
+  </div>
+  <div class="link">
+    <div class="text"><a href="3.html">close-range view</a></div>
+  </div>
+  <div class="link">
+    <div class="text"><a href="4.html">about space debris</a></div>
+  </div>
+
+</div>
+
+
+  <script type="text/javascript">
+  	
+  	var links = document.getElementsByClassName('link')
+	for(var i = 0; i <= links.length; i++)
+	   addClass(i)
+
+
+	function addClass(id){
+   setTimeout(function(){
+      if(id > 0) links[id-1].classList.remove('hover')
+      links[id].classList.add('hover')
+   }, id*750) 
+}
+
+
+
+
+  </script>
+
+
+
+
+
+</nav>
+
+<section class="bg">
+  <video src="middle.mp4" muted autoplay loop></video>
+  
+
+
+</section>
+
+
+
+
+
+
+<section class="all">
+
+	<div class="box1">
+	 <div class="con1">
+    
+      <div>
+
+        <div class="flex">
+
+          <div>
+          <h2>1957년 이후 발사된 로켓</h2>
+          <p>6050개</p>
+          </div>
+
+          <div class="line1">
+            <img class="line1" src="line1.png">
+          </div>
+
+        </div>
+
+        <h2>지구 궤도에 배치된 위성</h2>
+        <p>1만 1370개</p>
+
+        <h2>현재 지구 궤도를 돌고 있는 위성</h2>
+        <p>6900개</p>
+        
+
+      </div>
+
+
+
+    </div>
+
+
+	</div>
+
+
+    <div class="box2">
+  <p class="textbox">
+   
+
+  </p>
+
+  </div>
+
+
+    <div class="box3">
+           <div class="con2">
+             
+              <div class="flex end">
+
+                 <div class="line2"><img class="line2" src="line2.png"></div>
+
+                  <div>
+                  <h2>지구 궤도에 있는 우주 쓰레기 양</h2>
+                  <p>9300t</p>
+                  </div>
+
+      
+          </div>
+
+            <div class="img1 flex end"> </div>
+
+
+
+           </div>
+
+          <div class="con3">
+
+
+              <div>
+
+        <div class="flex end">
+
+           <div class="line3"><img class="line3" src="line3.png"></div>
+
+          <div>
+          <h2 >우주 쓰레기를 만든 충돌 횟수</h2>
+          <p>560회</p>
+          </div>
+
+         
+
+        </div>
+
+
+        <div class=" end">
+
+        <h2>우주 쓰레기와 위성 하루 10km 이내 근접 횟수</h2>
+        <p>1000회</p>
+
+       </div>
+
+    
+    
+      </div>
+            
+
+      
+       </div>
+
+
+
+
+  </div>
+
+
+</section>
+
+
+</body>
+</html>

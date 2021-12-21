@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+	<title>distant view</title>
+
+
+	<style type="text/css">
+
+     a:link { color: black; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+
+
+		
+
+	body  { margin: 0;
+	  display: block;
+	  height:100%;
+	  background: black;
+
+	  -ms-overflow-style:none;
+    font-family: 'Gothic A1', sans-serif;
+	}
+
+	body::-webkit-scrollbar {display: none;}
+
+	h1{
+	  text-align: center;
+	  color: black;
+	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+	#space{
+	  position: absolute ;
+	  top: 50%;
+	  left: 50%;
+	  margin-left: -500px;
+	  margin-top: -300px;
+	  width: 1000px;
+	  height: 600px;
+	}
+
+
+
+
+
+
+
+	nav { position: sticky; top: 0px; margin-left: 2%;  font-family: 'Kanit', sans-serif;
+        z-index: 10;}
+
+
+	a { text-decoration:none }
+
+	
+ 	a:visited { color: white; text-decoration: none;}
+ 	a:hover { color: white; text-decoration: none;}
+
+
+  video::-webkit-media-controls-fullscreen-button {display: none !important;}
+  video::-webkit-media-controls-play-button {display: none !important;}
+  video::-webkit-media-controls-mute-button {display: none !important;}
+  video::-webkit-media-controls-volume-slider {display: none !important;}
+  video::-webkit-media-controls-time-remaining-display {display: none !important;}
+  video::-webkit-media-controls-current-time-display{display: none !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.container{
+   max-width:205px;
+   background color: black
+   margin-left: 10%;
+   padding:10px 0px 20px 0px;
+   border-radius:4px;
+}
+
+
+.linkhere{
+   font-size:18px;
+   font-weight:300;
+   text-align:left;
+   position:relative;
+   height:40px;
+   line-height:40px;
+   margin-top:10px;
+   overflow:hidden;
+   width:90%;
+   margin-left:5%;
+   cursor:pointer;
+}
+
+
+
+
+.link{
+   font-size:18px;
+   font-weight:300;
+   text-align:left;
+   position:relative;
+   height:40px;
+   line-height:40px;
+   margin-top:10px;
+   overflow:hidden;
+   width:90%;
+   margin-left:5%;
+   cursor:pointer;
+}
+.link:after{
+   content: '';
+   position:absolute;
+   width:80%;
+   border-bottom:2px solid rgba(255, 255, 255, 0.5);
+   bottom:50%;
+   left:-100%;
+   transition-delay: all 0.5s;
+   transition: all 0.5s;
+}
+.link:hover:after,
+.link.hover:after{
+   left:100%;
+}
+.link .text{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+   transition:all 0.75s;
+   transform:translateY(100%) translateZ(0);
+   transition-delay:all 0.25s;
+}
+
+
+.linkhere .here{
+   text-shadow:0px -40px 0px rgba(0, 172, 237, 1);
+   transition:all 0.75s;
+   transform:translateY(100%) translateZ(0);
+   transition-delay:all 0.25s;
+   font-weight:600;
+}
+
+
+.link:hover .text,
+.link.hover .text{
+   text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+   transform:translateY(0%) translateZ(0);
+   font-weight:400;
+}
+
+
+
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+
+
+
+
+	</style>
+
+	<script src="jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+
+<nav>
+	
+<div class="container">
+  <div class="linkhere">
+    <div class="here"><a href="index.html">distant view</a></div>
+  </div>
+  <div class="link">
+    <div class="text"><a href="2.html">middle distance view</a></div>
+  </div>
+  <div class="link">
+    <div class="text"><a href="3.html">close-range view</a></div>
+  </div>
+  <div class="link">
+    <div class="text"><a href="4.html">about space debris</a></div>
+  </div>
+
+</div>
+
+
+  <script type="text/javascript">
+  	
+  	var links = document.getElementsByClassName('link')
+	for(var i = 0; i <= links.length; i++)
+	   addClass(i)
+
+
+	function addClass(id){
+   setTimeout(function(){
+      if(id > 0) links[id-1].classList.remove('hover')
+      links[id].classList.add('hover')
+   }, id*750) 
+}
+
+
+
+
+  </script>
+
+
+
+
+
+</nav>
+
+
+
+
+
+<video id="space"  src="space.mp4" autoplay controls disablePictureInPicture controlsList="nodownload noplaybackrate" autobuffer preload muted> 
+ 
+  
+</video>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

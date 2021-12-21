@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+	
+  <meta charset="UTF-8">
+  <title>close-range view</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+	<nav>
+			
+				<div class="container">
+		  <div class="link">
+		    <div class="text"><a href="index.html">distant view</a></div>
+		  </div>
+		  <div class="link">
+		    <div class="text"><a href="2.html">middle distance view</a></div>
+		  </div>
+		  <div class="linkhere">
+		    <div class="here"><a href="3.html">close-range view</a></div>
+		  </div>
+		  <div class="link">
+		    <div class="text"><a href="4.html">about space debris</a></div>
+		  </div>
+
+		</div>
+
+		</div>
+
+
+		  <script type="text/javascript">
+		  	
+		  	var links = document.getElementsByClassName('link')
+			for(var i = 0; i <= links.length; i++)
+			   addClass(i)
+
+
+			function addClass(id){
+		   setTimeout(function(){
+		      if(id > 0) links[id-1].classList.remove('hover')
+		      links[id].classList.add('hover')
+		   }, id*750) 
+		}
+		  </script>
+</nav>
+
+
+	  <div class="wrap">
+   
+        <h1 class="info"></h1>
+        <div class="target">
+        	<img class="ast" src="ast.gif">
+        	
+        </div>       
+    
+    </div>
+   <img src="t1.png" id="apple" style="display:none;">
+   <img src="t2.png" id="orange" style="display:none;">
+</body>
+<script type="text/javascript">
+	
+const html = document.querySelector("html");
+const info = document.querySelector(".info");
+
+const target = document.querySelector(".target");
+let center = {
+    x : target.getBoundingClientRect().left + (target.clientWidth/2),
+    y : target.getBoundingClientRect().top + (target.clientHeight/2)
+}
+
+window.addEventListener('resize', ()=>{
+    center = {
+        x : target.getBoundingClientRect().left + (target.clientWidth/2),
+        y : target.getBoundingClientRect().top + (target.clientHeight/2)
+    }
+    console.log('실행');
+})
+
+html.addEventListener('mousemove', (e)=>{
+    
+    const x = center.x - e.clientX;
+    const y = center.y - e.clientY;
+    
+    const radian = Math.atan2(y, x);
+    const degree = (radian * 180 / Math.PI).toFixed(0);
+    info.innerHTML = 'mouse(x/y) : ' + e.clientX + '/' + e.clientY + '<br>target : rotate ' + degree + 'deg';
+    target.style.transform = 'translate(-50%, -50%) rotate(' + degree + 'deg)';
+
+})
+
+
+
+
+
+</script>
+
+
+<!-- partial:index.partial.html -->
+<canvas id="triangle-lost-in-space" resize="true"></canvas>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.18/paper-full.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
