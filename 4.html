@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 
 
 	<title>about space debris</title>
@@ -505,7 +508,15 @@ button:hover {
 
 	<footer class="footer">
 		<div class="pad">
-		<button class="bt" id="bt" style="cursor:pointer" onclick="alert('아직 상용화된 우주쓰레기 처리 방안이 없습니다.')" >Remove space debris</button>
+	
+
+		<button class="bt" style="cursor:pointer" onclick="message()">Remove space debris</button>
+	<script>
+	function message()
+	{
+		swal("알림","아직 상용화된 우주쓰레기 처리 방안이 없습니다.");
+	};
+	</script>
 
 		<p class="ft">ⓒAll Data Rights Reserved JPL,ESA <br>
 		Website designed by Heji Lim</p>
